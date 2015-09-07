@@ -1,0 +1,44 @@
+<div ng-include="'components/navbar/navbar.html'">
+  
+</div>
+
+
+
+<div class="container">
+  <div class="panel col-md-12"  ng-repeat="thing in awesomeThings">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-md-8">
+          <h1>{{thing.name}}</h1>
+          <p>photo credit {{thing.credit}}</p>
+        </div>
+       <div class="pull-right"><button class="btn" ng-click="deleteThing(thing)">X</button></div>
+      </div>
+    </div>
+    <div class="container">
+      <img class="img-responsive" src="{{thing.url}}" alt="">
+    </div>
+    <div class="col-md-12"  ng-repeat="cmt in thing.comment">
+      <p>{{cmt}}</p>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+       <i class="fa fa-comment-o fa-3x"></i>
+       <input type="text" placeholder='...' ng-model="thing.newcmt" >
+       <button class="btn btn-default" ng-click="addComment(thing)">+</button>
+       <i class="fa fa-arrow-down fa-2x pull-right"></i>
+       <i class="fa fa-arrow-up fa-2x pull-right"></i>
+       </div>
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack v2.1.1 |
+        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+  </div>
+</footer>
