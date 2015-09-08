@@ -8,7 +8,8 @@ var ThingSchema = new Schema({
   url: String,
   credit: String,
   active: Boolean,
-  comment: Array
+  comment: Array,
+  newcmt: String
 });
 
 module.exports = mongoose.model('Thing', ThingSchema);

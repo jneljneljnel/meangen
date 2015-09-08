@@ -27,13 +27,17 @@ angular.module('meangenApp')
 
 
     $scope.addComment = function(thing) {
-      $scope.newindex=thing.comment.length;
-      $scope.newcmt=thing.newcmt;
-      thing.comment[$scope.newindex] = $scope.newcmt;
-      
-      $http.put('/api/things/' + thing._id, thing).success(function(response) {
+      if(thing.newcmt == '') {
+        return;
+      }
+      $scope.newcmt = thing.comment;
+      $scope.newcmt.push(thing.newcmt);
+      console.log($scope.newcmt)
+      $http.put('/api/things/' + thing._id, {comment : $scope.newcmt }, {safe: true, upsert: true, new : true}).success(function(response) {
+        
+        console.log(response);
         refresh();
-        console.log(thing);
+       
       })
     };
 
