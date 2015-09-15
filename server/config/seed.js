@@ -15,51 +15,57 @@ Thing.find({}).remove(function() {
     name : 'Clark Street',
     url : 'assets/images/chicago.jpg',
     credit : 'Jeremy Nelson',
-    comment : ['Wow what a great pic', 'awesome!'],
+    upvotes : '2'
   }, {
     name : 'Fountain',
-     url : 'assets/images/chicago1.jpg',
-    credit : 'Jeremy Nelson'
+    url : 'assets/images/chicago1.jpg',
+    credit : 'Jeremy Nelson',
+    upvotes : '0'
   }, {
     name : 'View from my Apt',
-     url : 'assets/images/chicago2.jpg',
-    credit : 'Jeremy Nelson'
+    url : 'assets/images/chicago2.jpg',
+    credit : 'Jeremy Nelson',
+    upvotes : '0'
   }, {
     name : 'Movie Theatre',
-     url : 'assets/images/chicago3.jpg',
-     credit : 'DAve Nelson'
-  }, {
-    name : 'Macy\'s',
-     url : 'assets/images/chicago4.jpg',
-      credit : 'Jeremy Nelson'
-  }, {
+    url : 'assets/images/chicago3.jpg',
+    credit : 'DAve Nelson',
+    upvotes : '0'
+  },  {
     name : 'Another movie Theatre',
-     url : 'assets/images/chicago5.jpg',
-    credit : 'Jeremy Nelson'
+    url : 'assets/images/chicago5.jpg',
+    credit : 'Jeremy Nelson',
+    upvotes : '3'
   }, {
     name : 'Michigan Ocean',
-     url : 'assets/images/chicago6.jpg',
-    credit : 'Jeremy Nelson'
+    url : 'assets/images/chicago6.jpg',
+    credit : 'Jeremy Nelson',
+    upvotes : '0'
   },  {
     name : 'Billis Tower',
-     url : 'assets/images/chicago8.jpg',
-      credit : 'Jeremy Nelson'
+    url : 'assets/images/chicago8.jpg',
+    credit : 'Jeremy Nelson',
+    upvotes : '0'
   }, {
     name : 'Chicago at Night',
-     url : 'assets/images/chicago9.jpg',
-      credit : 'Jeremy Nelson'
+    url : 'assets/images/chicago9.jpg',
+    credit : 'Jeremy Nelson',
+    upvotes : '0'
   }, {
     name : 'Trump Tower',
-     url : 'assets/images/chicago10.jpg',
-      credit : 'Jeremy Nelson'
+    url : 'assets/images/chicago10.jpg',
+    credit : 'Jeremy Nelson',
+    upvotes : '0'
   }, {
     name : 'View from my apt',
-      url : 'assets/images/chicago11.jpg',
-       credit : 'Jeremy Nelson'
+    url : 'assets/images/chicago11.jpg',
+    credit : 'Jeremy Nelson',
+    upvotes : '0'
   }, {
     name : 'Deployment Ready',
-      url : 'assets/images/chicago1.jpg',
-       credit : 'Jeremy Nelson'
+    url : 'assets/images/chicago1.jpg',
+    credit : 'Jeremy Nelson',
+    upvotes : '0'
   });
 });
 

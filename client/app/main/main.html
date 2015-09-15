@@ -2,10 +2,28 @@
   
 </div>
 
+<div class="container">
+  <div class="panel col-md-12">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>Title</h4>
+            <input type="text" placeholder='enter a title...' ng-model="thing.name" >
+          <h4>Url</h4>
+            <input type="text" placeholder='enter a image url...' ng-model='thing.url'>
+          <h4>photo credit</h4>
+            <input type="text" placeholder='enter a photo credit ...' ng-model='thing.credit' >
+        </div>
+       <div><button class="btn" ng-click="addThing(thing)">+ add a new photo</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <div class="container">
-  <div class="panel col-md-12"  ng-repeat="thing in awesomeThings">
+  <div class="panel col-md-12"  ng-repeat="thing in awesomeThings | orderBy:'-upvotes'">
     <div class="panel-heading">
       <div class="row">
         <div class="col-md-8">
@@ -18,20 +36,25 @@
     <div class="container">
       <img class="img-responsive" src="{{thing.url}}" alt="">
     </div>
-    <div class="col-md-12"  ng-repeat="comment in thing.comment">
-      <p>{{comment}}</p>
+   <!--  <div class="col-md-12"  ng-repeat="comment in comments | filter:{'comment.thingid': thing.id}:true">
+      <p>{{comment.text}}</p>
+    </div>
+    <div class="div">
+       <p>{{thing.newcomment}}</p>
     </div>
     <div class="row">
       <div class="col-xs-12">
        <i class="fa fa-comment-o fa-3x"></i>
        <input type="text" placeholder='...' ng-model="thing.newcmt" >
-       <button class="btn btn-default" ng-click="addComment(thing)">+</button>
-       <i class="fa fa-arrow-down fa-2x pull-right"></i>
-       <i class="fa fa-arrow-up fa-2x pull-right"></i>
-       </div>
-    </div>
+       <button class="btn btn-default" ng-click="addComment(thing)">+</button> -->
+       <a href=""><i  ng-click="downVote(thing)"class="fa fa-arrow-down fa-2x pull-right"></i></a>
+       <span id='upvotes' class='pull-right'>{{thing.upvotes}}</span>
+       <a href=""><i ng-click="upVote(thing)" class="fa fa-arrow-up fa-2x pull-right"></i></a>
+        <!--  </div> -->
+      <!--  </div>
+    </div> -->
     
-    </div>
+   <!--  </div> -->
   </div>
 </div>
 
