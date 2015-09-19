@@ -24,13 +24,6 @@ angular.module('meangenApp')
       })    
         
     }
-
-    
-    $http.get('/api/comments').success(function(comments) {
-      $scope.comments = comments;
-      console.log(comments);
-    });
-
   
     $http.get('/api/things').success(function(awesomeThings) {
       $scope.awesomeThings = awesomeThings;
