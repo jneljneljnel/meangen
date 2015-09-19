@@ -18,17 +18,3 @@ describe('GET /api/things', function() {
       });
   });
 });
-
-
-describe('things', function(){
-
-  it('should pass', function(done){
-    done();
-  });
-
-  it('should not pass' function(done){
-    throw "don't pass";
-    done();
-  });
-
-});
