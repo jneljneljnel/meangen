@@ -69,8 +69,11 @@ margin-bottom: 20px
 
 input{
 border: 0px;
-font-size:2em ;
+}
 
+.ex{
+    position: absolute;
+    right: 0px;
 }
 
 

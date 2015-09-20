@@ -25,16 +25,34 @@
 <div class="container">
   <div class="panel col-md-12"  ng-repeat="thing in awesomeThings | orderBy:'-upvotes'">
     <div class="panel-heading">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pull-right ex"><button class="btn" ng-click="deleteThing(thing)">X</button></div>
+          </div>
+        </div>
       <div class="row">
         <div class="col-md-8">
           <h1>{{thing.name}}</h1>
           <p>photo credit {{thing.credit}}</p>
-        </div>
-       <div class="pull-right"><button class="btn" ng-click="deleteThing(thing)">X</button></div>
+        </div> 
       </div>
     </div>
     <div class="container">
       <img class="img-responsive" src="{{thing.url}}" alt="">
+      <div class="row">
+        <div class='col-md-4  col-xs-4'>
+          <a href=""><i  ng-click="downVote(thing)"class="fa fa-arrow-down fa-2x xs-pull-right"></i></a>
+        </div>
+        <div class='col-md-4 col-xs-4'>
+        <span id='upvotes' class='xs-pull-right'>{{thing.upvotes}}</span>
+        </div>
+        <div class='col-md-4 col-xs-4'>
+        <a href=""><i ng-click="upVote(thing)" class="fa fa-arrow-up fa-2x xs-pull-right"></i></a>
+      </div>
+      </div>
+        
+      </div>
+     
     </div>
    <!--  <div class="col-md-12"  ng-repeat="comment in comments | filter:{'comment.thingid': thing.id}:true">
       <p>{{comment.text}}</p>
@@ -47,9 +65,8 @@
        <i class="fa fa-comment-o fa-3x"></i>
        <input type="text" placeholder='...' ng-model="thing.newcmt" >
        <button class="btn btn-default" ng-click="addComment(thing)">+</button> -->
-       <a href=""><i  ng-click="downVote(thing)"class="fa fa-arrow-down fa-2x pull-right"></i></a>
-       <span id='upvotes' class='pull-right'>{{thing.upvotes}}</span>
-       <a href=""><i ng-click="upVote(thing)" class="fa fa-arrow-up fa-2x pull-right"></i></a>
+     
+     
         <!--  </div> -->
       <!--  </div>
     </div> -->
