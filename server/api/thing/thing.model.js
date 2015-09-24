@@ -8,7 +8,7 @@ var ThingSchema = new Schema({
   url: String,
   credit: String,
   active: Boolean,
-  upvotes: Number
+  upvotes: { type: Number, default: 0 }
 });
 
 module.exports = mongoose.model('Thing', ThingSchema);

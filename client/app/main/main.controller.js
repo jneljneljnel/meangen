@@ -41,14 +41,14 @@ angular.module('meangenApp')
 
 
     $scope.addThing = function(newthing) {
-      if($scope.newThing === '') {
+      if($scope.newThing === '' ) {
         return;
       }
-      console.log($scope.newthing);
-      console.log(newthing);
-      $http.post('/api/things/', newthing );
+      $http.post('/api/things/', newthing ).success(function(){
+          refresh();
+      });
      
-      refresh();
+  
     };
 
 
