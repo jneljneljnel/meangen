@@ -13,17 +13,17 @@ angular.module('meangenApp')
       $http.put('/api/things/' + thing._id, thing).success(function(response) {    
       $scope.thing=response;
       refresh();
-      })    
+      });    
     }
-
+;
     $scope.downVote = function (thing) {
         thing.upvotes--;
         $http.put('/api/things/' + thing._id, thing).success(function(response) {    
         $scope.thing=response;
         refresh();
-      })    
+      });   
         
-    }
+    };
   
     $http.get('/api/things').success(function(awesomeThings) {
       $scope.awesomeThings = awesomeThings;
