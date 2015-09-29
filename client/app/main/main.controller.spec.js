@@ -25,4 +25,21 @@ describe('Controller: MainCtrl', function () {
     $httpBackend.flush();
     expect(scope.awesomeThings.length).toBe(4);
   });
+
+  it('should respond to GET', function () {
+      //
+  });
+
+  it('should respond to PUT', function () {
+   //
+  });
+
+  it('should respond to UPDATE', function () {
+    //
+  });
+
+  it('should respond to DELETE', function () {
+    //
+  });
 });
+
